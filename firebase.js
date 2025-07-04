@@ -1,18 +1,13 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAu4Zj899KyBp0L7lok8fPw6MG8MASwtpQ",
-  authDomain: "fir-database-todo.firebaseapp.com",
-  databaseURL: "https://fir-database-todo-default-rtdb.firebaseio.com",
-  projectId: "fir-database-todo",
-  storageBucket: "fir-database-todo.firebasestorage.app",
-  messagingSenderId: "725330239895",
-  appId: "1:725330239895:web:31c87a99a448db3f3364d2"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  databaseURL: import.meta.env.VITE_FIREBASE_DB_URL,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
